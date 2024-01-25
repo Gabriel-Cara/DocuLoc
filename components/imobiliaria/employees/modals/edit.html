@@ -1,0 +1,108 @@
+<div
+  class="modal fade"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dados do usuário</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  value="Marco Iwanaga"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="cargo">Cargo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cargo"
+                  value="Dono"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  value="marco.iwanaga@doculoc.com"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="password">Senha</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  value="marco123"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cpf"
+                  value="123.123.123-12"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  value="(11) 99999-9999"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+          Fechar
+        </button>
+        <button type="button" class="btn btn-info">Salvar alterações</button>
+      </div>
+    </div>
+  </div>
+</div>

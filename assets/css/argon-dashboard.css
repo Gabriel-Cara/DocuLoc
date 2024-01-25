@@ -271,8 +271,14 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
+  color: var(--bs-dark);
   text-decoration: none;
+}
+
+a.link:hover{
+  color: #fff;
+  background: #11cdef;
+  padding: .2rem .4rem;
 }
 
 a:hover {
@@ -10681,6 +10687,11 @@ fieldset:disabled .btn {
 
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
+}
+
+.bg-coming {
+  background: url('../img/background/coming-pattern.svg') center no-repeat;
+  z-index: -10;
 }
 
 .user-select-all {
