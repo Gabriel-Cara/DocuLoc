@@ -85,13 +85,13 @@
     width: 100%;
     height: 0;
     opacity: 0;
-    visibility: hidden
+    display: none !important;
 }
 
 .multisteps-form__panel.js-active {
     height: auto;
     opacity: 1;
-    visibility: visible
+    display: block !important;
 }
 
 .multisteps-form__panel[data-animation=scaleIn] {

@@ -9,6 +9,7 @@ const DOMstrings = {
   stepPrevBtnClass: 'js-btn-prev',
   stepNextBtnClass: 'js-btn-next'
 }
+
 const removeClasses = (elemSet,className)=>{
   elemSet.forEach(elem=>{
       elem.classList.remove(className);
@@ -46,6 +47,7 @@ const getActivePanel = ()=>{
       }
   }
   );
+
   return activePanel;
 }
 

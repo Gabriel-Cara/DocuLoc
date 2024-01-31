@@ -580,22 +580,4 @@
   </body>
 
   <script src="../../assets/js/plugins/multistep-form.js"></script>
-
-  <script>
-    let currentStep = 0;
-    const formSteps = document.querySelectorAll(".form-step");
-    const form = document.querySelector("form");
-
-    // animation
-    formSteps.forEach((formStep) => {
-      function addHide() {
-        formStep.classList.add("hide");
-      }
-
-      formStep.addEventListener("animationend", () => {
-        addHide();
-        formSteps[currentStep].classList.remove("hide");
-      });
-    });
-  </script>
 </html>
