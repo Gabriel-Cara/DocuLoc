@@ -10,6 +10,8 @@ const DOMstrings = {
   stepNextBtnClass: 'js-btn-next'
 }
 
+console.log(DOMstrings.stepFormPanels);
+
 const removeClasses = (elemSet,className)=>{
   elemSet.forEach(elem=>{
       elem.classList.remove(className);

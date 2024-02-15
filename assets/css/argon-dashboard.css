@@ -11131,6 +11131,14 @@ fieldset:disabled .btn {
   max-width: 500px !important;
 }
 
+.max-w-80 {
+  max-width: 80% !important;
+}
+
+.max-w-90 {
+  max-width: 80% !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;

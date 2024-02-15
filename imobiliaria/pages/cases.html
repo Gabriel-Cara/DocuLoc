@@ -34,6 +34,8 @@
       href="../../assets/css/argon-dashboard.css?v=2.0.4"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="../../components/multistep-form/style.css" />
   </head>
   <!-- End Head -->
 
@@ -220,10 +222,7 @@
                   <h4 class="text-white font-weight-bolder mt-1 mx-2">
                     Tabela de Casos
                   </h4>
-                  <a
-                    class="btn btn-success mx-2 my-2"
-                    data-bs-toggle="modal"
-                    data-bs-target="#createModal"
+                  <a class="btn btn-success mx-2 my-2" href="./new-case.html"
                     >Criar</a
                   >
                 </div>
@@ -287,6 +286,7 @@
                         </div>
                       </div>
                     </td>
+
                     <td>
                       <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
                     </td>
@@ -621,43 +621,6 @@
 
       <!-- End Content -->
     </main>
-
-    <!-- Modal Create -->
-    <div
-      class="modal fade"
-      id="createModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog col-lg-12 modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Cadastro de usuário
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-              Fechar
-            </button>
-            <button type="button" class="btn btn-success">Cadastrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Fixed Button -->
     <div class="fixed-plugin">
