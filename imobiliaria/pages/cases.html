@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Nucleo Icons -->
     <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -180,30 +181,21 @@
 
           <!-- Buttons -->
           <div class="d-flex align-items-center gap-5">
-            <a
-              href="./cases.html"
-              type="button"
-              class="btn bg-gradient-warning"
-            >
-              <span>Casos em aberto</span>
-              <span class="badge bg-default ms-2">10</span>
+            <a href="./cases.html" type="button" class="btn d-flex align-items-center bg-gradient-warning">
+                Casos&nbsp;<span class="d-none d-md-flex">em aberto</span>
+                <span class="badge bg-default ms-2">10</span>
             </a>
-            <a
-              href="javascript:;"
-              class="nav-link d-xl-none text-white p-0"
-              id="iconNavbarSidenav"
-            >
-              <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-              </div>
+            <a href="javascript:;" class="nav-link d-xl-none text-white p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line bg-white"></i>
+                    <i class="sidenav-toggler-line bg-white"></i>
+                    <i class="sidenav-toggler-line bg-white"></i>
+                </div>
             </a>
-            <a href="./sign-in.html" class="btn bg-danger text-white">
-              <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
-              Sair
+            <a href="./sign-in.html" class="btn d-flex align-items-center justify-content bg-danger text-white py-md-3">
+                <i class="ph-bold ph-sign-out" style="font-size: 18px;"></i>&nbsp;<span class="d-none d-md-block">Sair</span>
             </a>
-          </div>
+        </div>
           <!-- End Buttons -->
         </div>
       </nav>
@@ -222,8 +214,14 @@
                   <h4 class="text-white font-weight-bolder mt-1 mx-2">
                     Tabela de Casos
                   </h4>
-                  <a class="btn btn-success mx-2 my-2" href="./new-case.html"
-                    >Criar</a
+                  <a
+                    class="btn d-flex align-items-center btn-success mx-2 my-2"
+                    href="./new-case.html"
+                    ><i
+                      class="ph-bold ph-plus-circle"
+                      style="font-size: 18px"
+                    ></i
+                    >&nbsp;<span class="d-none d-md-block">Criar</span></a
                   >
                 </div>
               </div>
