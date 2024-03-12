@@ -1,889 +1,1107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <!-- Head -->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="../../assets/img/apple-icon.png"
-    />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
-    <title>DocuLoc | Casos - Imobiliária</title>
-    <!--     Fonts and icons     -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Nucleo Icons -->
-    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <script
-      src="https://kit.fontawesome.com/d8cba989f3.js"
-      crossorigin="anonymous"
-    ></script>
-    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link
-      id="pagestyle"
-      href="../../assets/css/argon-dashboard.css?v=2.0.4"
-      rel="stylesheet"
-    />
+<!-- Head -->
 
-    <link rel="stylesheet" href="../../components/multistep-form/style.css" />
-  </head>
-  <!-- End Head -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+  <title>DocuLoc | Casos - Imobiliária</title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/d8cba989f3.js" crossorigin="anonymous"></script>
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 
-  <body class="g-sidenav-show bg-gray-100">
-    <div
-      class="min-height-300 bg-gradient-warning position-absolute w-100"
-    ></div>
+  <link rel="stylesheet" href="../../components/multistep-form/style.css" />
+</head>
+<!-- End Head -->
 
-    <!-- Sidebar -->
-    <aside
-      class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4"
-      id="sidenav-main"
-      style="z-index: 900"
-    >
-      <!-- Header Sidebar -->
-      <div class="sidenav-header">
-        <i
-          class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
-          aria-hidden="true"
-          id="iconSidenav"
-        ></i>
-        <a
-          class="navbar-brand m-0"
-          href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
-          target="_blank"
-        >
-          <img
-            src="../../assets/img/logo-ct-dark.png"
-            class="navbar-brand-img h-100"
-            alt="main_logo"
-          />
-          <span class="ms-1 font-weight-bold">DocuLoc</span>
-        </a>
-      </div>
-      <!-- End Header Sidebar -->
+<body class="g-sidenav-show bg-gray-100">
+  <div class="min-height-300 bg-gradient-warning position-absolute w-100"></div>
 
-      <hr class="horizontal dark mt-0" />
-
-      <!-- Body Sidebar -->
-      <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
-        <ul class="navbar-nav">
-          <!-- First Step -->
-          <li class="nav-item">
-            <a class="nav-link" href="./dashboard.html">
-              <div
-                class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
-              >
-                <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-              </div>
-              <span class="nav-link-text ms-1">Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="./cases.html">
-              <div
-                class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
-              >
-                <i
-                  class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
-                ></i>
-              </div>
-              <span class="nav-link-text ms-1">Casos</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./employees.html">
-              <div
-                class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
-              >
-                <i
-                  class="ni ni-single-copy-04 text-info text-sm opacity-10"
-                ></i>
-              </div>
-              <span class="nav-link-text ms-1">Funcionários</span>
-            </a>
-          </li>
-          <!-- End First Step -->
-
-          <!-- Second Step -->
-          <li class="nav-item mt-3">
-            <h6
-              class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6"
-            >
-              Páginas da Conta
-            </h6>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./profile.html">
-              <div
-                class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
-              >
-                <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-              </div>
-              <span class="nav-link-text ms-1">Perfil</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./billing.html">
-              <div
-                class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
-              >
-                <i
-                  class="ni ni-credit-card text-success text-sm opacity-10"
-                ></i>
-              </div>
-              <span class="nav-link-text ms-1">Financeiro</span>
-            </a>
-          </li>
-          <!-- End Second Step -->
-        </ul>
-      </div>
-      <!-- End Body Sidebar -->
-    </aside>
-    <!-- End Sidebar -->
-
-    <main class="main-content position-relative border-radius-lg">
-      <!-- Navbar -->
-      <nav
-        class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
-        id="navbarBlur"
-        data-scroll="false"
-      >
-        <div class="container-fluid py-1 px-3">
-          <!-- Pagination -->
-          <nav aria-label="breadcrumb">
-            <ol
-              class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5"
-            >
-              <li class="breadcrumb-item text-sm opacity-5 text-white">
-                Imobiliária
-              </li>
-              <li
-                class="breadcrumb-item text-sm text-white active"
-                aria-current="page"
-              >
-                Casos
-              </li>
-            </ol>
-            <h6 class="font-weight-bolder text-white mb-0">Casos</h6>
-          </nav>
-          <!-- End Pagination -->
-
-          <!-- Buttons -->
-          <div class="d-flex align-items-center gap-5">
-            <a href="./cases.html" type="button" class="btn d-flex align-items-center bg-gradient-warning">
-                Casos&nbsp;<span class="d-none d-md-flex">em aberto</span>
-                <span class="badge bg-default ms-2">10</span>
-            </a>
-            <a href="javascript:;" class="nav-link d-xl-none text-white p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
-                </div>
-            </a>
-            <a href="./sign-in.html" class="btn d-flex align-items-center justify-content bg-danger text-white py-md-3">
-                <i class="ph-bold ph-sign-out" style="font-size: 18px;"></i>&nbsp;<span class="d-none d-md-block">Sair</span>
-            </a>
-        </div>
-          <!-- End Buttons -->
-        </div>
-      </nav>
-      <!-- End Navbar -->
-
-      <!-- Content -->
-      <div class="container-fluid py-4">
-        <div class="row">
-          <div class="card">
-            <!-- Header -->
-            <div class="row">
-              <div
-                class="card bg-default py-2 border-radius-bottom-start-0 border-radius-bottom-end-0"
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="text-white font-weight-bolder mt-1 mx-2">
-                    Tabela de Casos
-                  </h4>
-                  <a
-                    class="btn d-flex align-items-center btn-success mx-2 my-2"
-                    href="./new-case.html"
-                    ><i
-                      class="ph-bold ph-plus-circle"
-                      style="font-size: 18px"
-                    ></i
-                    >&nbsp;<span class="d-none d-md-block">Criar</span></a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Body -->
-            <div class="table-responsive">
-              <table class="table align-items-center mb-0">
-                <thead>
-                  <tr>
-                    <th
-                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                    >
-                      Responsável
-                    </th>
-                    <th
-                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-                    >
-                      Locador
-                    </th>
-                    <th
-                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-                    >
-                      Locatário
-                    </th>
-                    <th
-                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-                    >
-                      Progresso
-                    </th>
-                    <th
-                      class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                    >
-                      Ações
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img
-                            src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-xs">
-                            Gabriel Vieira Quesada Cara
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            gabriel.cara@doculoc.com
-                          </p>
-                          <p
-                            class="text-xs text-sencodary mb-0 font-weight-bold"
-                          >
-                            Gerente
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-
-                    <td>
-                      <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <span class="text-secondary text-xs font-weight-bolder"
-                        >Marco Iwanaga</span
-                      >
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-sm font-weight-bold">0%</span>
-                          </div>
-                        </div>
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-danger"
-                            role="progressbar"
-                            aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 0%"
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                      <a
-                        class="btn btn-info my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal"
-                        >Editar</a
-                      >
-                      <a
-                        class="btn btn-danger my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
-                        >Deletar</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img
-                            src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-xs">
-                            Gabriel Vieira Quesada Cara
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            gabriel.cara@doculoc.com
-                          </p>
-                          <p
-                            class="text-xs text-sencodary mb-0 font-weight-bold"
-                          >
-                            Gerente
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <span class="text-secondary text-xs font-weight-bolder"
-                        >Marco Iwanaga</span
-                      >
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-sm font-weight-bold">25%</span>
-                          </div>
-                        </div>
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-gradient-warning"
-                            role="progressbar"
-                            aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 25%"
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                      <a
-                        class="btn btn-info my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal"
-                        >Editar</a
-                      >
-                      <a
-                        class="btn btn-danger my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
-                        >Deletar</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img
-                            src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-xs">
-                            Gabriel Vieira Quesada Cara
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            gabriel.cara@doculoc.com
-                          </p>
-                          <p
-                            class="text-xs text-sencodary mb-0 font-weight-bold"
-                          >
-                            Gerente
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <span class="text-secondary text-xs font-weight-bolder"
-                        >Marco Iwanaga</span
-                      >
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-sm font-weight-bold">50%</span>
-                          </div>
-                        </div>
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-gradient-primary"
-                            role="progressbar"
-                            aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 50%"
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                      <a
-                        class="btn btn-info my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal"
-                        >Editar</a
-                      >
-                      <a
-                        class="btn btn-danger my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
-                        >Deletar</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img
-                            src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-xs">
-                            Gabriel Vieira Quesada Cara
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            gabriel.cara@doculoc.com
-                          </p>
-                          <p
-                            class="text-xs text-sencodary mb-0 font-weight-bold"
-                          >
-                            Gerente
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <span class="text-secondary text-xs font-weight-bolder"
-                        >Marco Iwanaga</span
-                      >
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-sm font-weight-bold">75%</span>
-                          </div>
-                        </div>
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-gradient-info"
-                            role="progressbar"
-                            aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 75%"
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                      <a
-                        class="btn btn-info my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal"
-                        >Editar</a
-                      >
-                      <a
-                        class="btn btn-danger my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
-                        >Deletar</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img
-                            src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-xs">
-                            Gabriel Vieira Quesada Cara
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            gabriel.cara@doculoc.com
-                          </p>
-                          <p
-                            class="text-xs text-sencodary mb-0 font-weight-bold"
-                          >
-                            Gerente
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <span class="text-secondary text-xs font-weight-bolder"
-                        >Marco Iwanaga</span
-                      >
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-sm font-weight-bold">100%</span>
-                          </div>
-                        </div>
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-gradient-success"
-                            role="progressbar"
-                            aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 100%"
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                      <a
-                        class="btn btn-info my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal"
-                        >Editar</a
-                      >
-                      <a
-                        class="btn btn-danger my-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
-                        >Deletar</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer class="footer pt-3">
-        <div class="container-fluid">
-          <div class="copyright text-center text-sm text-muted text-lg-start">
-            © feito em 2023 por&nbsp;<a
-              href="https://github.com/Gabriel-Cara"
-              class="font-weight-bold"
-              target="_blank"
-              ><mark>Gabriel Cara</mark></a
-            >&nbsp;para <strong>DocuLoc</strong>.
-          </div>
-        </div>
-      </footer>
-      <!-- End Footer -->
-
-      <!-- End Content -->
-    </main>
-
-    <!-- Fixed Button -->
-    <div class="fixed-plugin">
-      <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-        <i class="fa fa-cog py-2"> </i>
+  <!-- Sidebar -->
+  <aside
+    class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4"
+    id="sidenav-main" style="z-index: 900">
+    <!-- Header Sidebar -->
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+        aria-hidden="true" id="iconSidenav" style="font-size: 18px;"></i>
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
+        target="_blank">
+        <img src="../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo" />
+        <span class="ms-1 font-weight-bold">DocuLoc</span>
       </a>
-      <div class="card shadow-lg">
-        <div class="card-header pb-0 pt-3">
-          <div class="float-start">
-            <h5 class="mt-3 mb-0">Argon Configurator</h5>
-            <p>See our dashboard options.</p>
-          </div>
-          <div class="float-end mt-4">
-            <button
-              class="btn btn-link text-dark p-0 fixed-plugin-close-button"
-            >
-              <i class="fa fa-close"></i>
-            </button>
-          </div>
-          <!-- End Toggle Button -->
-        </div>
-        <hr class="horizontal dark my-1" />
-        <div class="card-body pt-sm-3 pt-0 overflow-auto">
-          <!-- Sidebar Backgrounds -->
-          <div>
-            <h6 class="mb-0">Sidebar Colors</h6>
-          </div>
-          <a href="javascript:void(0)" class="switch-trigger background-color">
-            <div class="badge-colors my-2 text-start">
-              <span
-                class="badge filter bg-gradient-primary active"
-                data-color="primary"
-                onclick="sidebarColor(this)"
-              ></span>
-              <span
-                class="badge filter bg-gradient-dark"
-                data-color="dark"
-                onclick="sidebarColor(this)"
-              ></span>
-              <span
-                class="badge filter bg-gradient-info"
-                data-color="info"
-                onclick="sidebarColor(this)"
-              ></span>
-              <span
-                class="badge filter bg-gradient-success"
-                data-color="success"
-                onclick="sidebarColor(this)"
-              ></span>
-              <span
-                class="badge filter bg-gradient-warning"
-                data-color="warning"
-                onclick="sidebarColor(this)"
-              ></span>
-              <span
-                class="badge filter bg-gradient-danger"
-                data-color="danger"
-                onclick="sidebarColor(this)"
-              ></span>
+    </div>
+    <!-- End Header Sidebar -->
+
+    <hr class="horizontal dark mt-0" />
+
+    <!-- Body Sidebar -->
+    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <!-- First Step -->
+        <li class="nav-item">
+          <a class="nav-link" href="./dashboard.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-tv-2 text-primary text-sm opacity-10" style="font-size: 18px;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./cases.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10" style="font-size: 18px;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Casos</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./employees.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-single-copy-04 text-info text-sm opacity-10" style="font-size: 18px;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Funcionários</span>
+          </a>
+        </li>
+        <!-- End First Step -->
+
+        <!-- Second Step -->
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">
+            Páginas da Conta
+          </h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-single-02 text-dark text-sm opacity-10" style="font-size: 18px;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perfil</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./billing.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-credit-card text-success text-sm opacity-10" style="font-size: 18px;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Financeiro</span>
+          </a>
+        </li>
+        <!-- End Second Step -->
+      </ul>
+    </div>
+    <!-- End Body Sidebar -->
+  </aside>
+  <!-- End Sidebar -->
+
+  <main class="main-content position-relative border-radius-lg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+      data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <!-- Pagination -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm opacity-5 text-white">
+              Imobiliária
+            </li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">
+              Casos
+            </li>
+          </ol>
+          <h6 class="font-weight-bolder text-white mb-0">Casos</h6>
+        </nav>
+        <!-- End Pagination -->
+
+        <!-- Buttons -->
+        <div class="d-flex align-items-center gap-5">
+          <a href="./cases.html" type="button" class="btn d-flex align-items-center bg-gradient-warning">
+            Casos&nbsp;<span class="d-none d-md-flex">em aberto</span>
+            <span class="badge bg-default ms-2">10</span>
+          </a>
+          <a href="javascript:;" class="nav-link d-xl-none text-white p-0" id="iconNavbarSidenav">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line bg-white" style="font-size: 18px;"></i>
+              <i class="sidenav-toggler-line bg-white" style="font-size: 18px;"></i>
+              <i class="sidenav-toggler-line bg-white" style="font-size: 18px;"></i>
             </div>
           </a>
-          <!-- Sidenav Type -->
-          <div class="mt-3">
-            <h6 class="mb-0">Sidenav Type</h6>
-            <p class="text-sm">Choose between 2 different sidenav types.</p>
-          </div>
-          <div class="d-flex">
-            <button
-              class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2"
-              data-class="bg-white"
-              onclick="sidebarType(this)"
-            >
-              White
-            </button>
-            <button
-              class="btn bg-gradient-primary w-100 px-3 mb-2"
-              data-class="bg-default"
-              onclick="sidebarType(this)"
-            >
-              Dark
-            </button>
-          </div>
-          <p class="text-sm d-xl-none d-block mt-2">
-            You can change the sidenav type just on desktop view.
-          </p>
-          <!-- Navbar Fixed -->
-          <div class="d-flex my-3">
-            <h6 class="mb-0">Navbar Fixed</h6>
-            <div class="form-check form-switch ps-0 ms-auto my-auto">
-              <input
-                class="form-check-input mt-1 ms-auto"
-                type="checkbox"
-                id="navbarFixed"
-                onclick="navbarFixed(this)"
-              />
+          <a href="./sign-in.html" class="btn d-flex align-items-center justify-content bg-danger text-white py-md-3">
+            <i class="ph ph-sign-out" style="font-size: 18px" style="font-size: 18px;"></i>&nbsp;<span
+              class="d-none d-md-block">Sair</span>
+          </a>
+        </div>
+        <!-- End Buttons -->
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Content -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="card">
+          <!-- Header -->
+          <div class="row">
+            <div class="card bg-default py-2 border-radius-bottom-start-0 border-radius-bottom-end-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <h4 class="text-white font-weight-bolder mt-1 mx-2">
+                  Tabela de Casos
+                </h4>
+                <a class="btn d-flex align-items-center btn-success mx-2 my-2" href="./new-case.html"><i
+                    class="ph ph-plus-circle" style="font-size: 18px" style="font-size: 18px;"></i>&nbsp;<span
+                    class="d-none d-md-block">Criar</span></a>
+              </div>
             </div>
           </div>
-          <hr class="horizontal dark my-sm-4" />
-          <div class="mt-2 mb-5 d-flex">
-            <h6 class="mb-0">Light / Dark</h6>
-            <div class="form-check form-switch ps-0 ms-auto my-auto">
-              <input
-                class="form-check-input mt-1 ms-auto"
-                type="checkbox"
-                id="dark-version"
-                onclick="darkMode(this)"
-              />
-            </div>
-          </div>
-          <a
-            class="btn bg-gradient-dark w-100"
-            href="https://www.creative-tim.com/product/argon-dashboard"
-            >Free Download</a
-          >
-          <a
-            class="btn btn-outline-dark w-100"
-            href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard"
-            >View documentation</a
-          >
-          <div class="w-100 text-center">
-            <a
-              class="github-button"
-              href="https://github.com/creativetimofficial/argon-dashboard"
-              data-icon="octicon-star"
-              data-size="large"
-              data-show-count="true"
-              aria-label="Star creativetimofficial/argon-dashboard on GitHub"
-              >Star</a
-            >
-            <h6 class="mt-3">Thank you for sharing!</h6>
-            <a
-              href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard"
-              class="btn btn-dark mb-0 me-2"
-              target="_blank"
-            >
-              <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-            </a>
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard"
-              class="btn btn-dark mb-0 me-2"
-              target="_blank"
-            >
-              <i class="fab fa-facebook-square me-1" aria-hidden="true"></i>
-              Share
-            </a>
+
+          <!-- Body -->
+          <div class="table-responsive">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    Responsável
+                  </th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                    Locador
+                  </th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                    Locatário
+                  </th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                    Progresso
+                  </th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    Ações
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gabriel Vieira Quesada Cara
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gabriel.cara@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">0%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                          aria-valuemax="100" style="width: 0%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gabriel Vieira Quesada Cara
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gabriel.cara@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">25%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="25"
+                          aria-valuemin="25" aria-valuemax="100" style="width: 25%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gabriel Vieira Quesada Cara
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gabriel.cara@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">50%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="50" aria-valuemax="100" style="width: 50%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gabriel Vieira Quesada Cara
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gabriel.cara@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">75%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75"
+                          aria-valuemin="75" aria-valuemax="100" style="width: 75%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gabriel Vieira Quesada Cara
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gabriel.cara@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">100%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100"
+                          aria-valuemin="100" aria-valuemax="100" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Fixed Button -->
 
-    <script src="/assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer pt-3">
+      <div class="container-fluid">
+        <div class="copyright text-center text-sm text-muted text-lg-start">
+          © feito em 2023 por&nbsp;<a href="https://github.com/Gabriel-Cara" class="font-weight-bold"
+            target="_blank"><mark>Gabriel Cara</mark></a>&nbsp;para <strong>DocuLoc</strong>.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-    <!--   Core JS Files   -->
-    <script src="../../assets/js/core/popper.min.js"></script>
-    <script src="../../assets/js/core/bootstrap.min.js"></script>
-    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../../assets/js/plugins/chartjs.min.js"></script>
-    <script>
-      var ctx1 = document.getElementById("chart-line").getContext("2d");
+    <!-- End Content -->
+  </main>
 
-      var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
-      gradientStroke1.addColorStop(1, "rgba(94, 114, 228, 0.2)");
-      gradientStroke1.addColorStop(0.2, "rgba(94, 114, 228, 0.0)");
-      gradientStroke1.addColorStop(0, "rgba(94, 114, 228, 0)");
-      new Chart(ctx1, {
-        type: "line",
-        data: {
-          labels: [
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ],
-          datasets: [
-            {
-              label: "Mobile apps",
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 0,
-              borderColor: "#5e72e4",
-              backgroundColor: gradientStroke1,
-              borderWidth: 3,
-              fill: true,
-              data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-              maxBarThickness: 6,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-          interaction: {
-            intersect: false,
-            mode: "index",
-          },
-          scales: {
-            y: {
-              grid: {
-                drawBorder: false,
-                display: true,
-                drawOnChartArea: true,
-                drawTicks: false,
-                borderDash: [5, 5],
-              },
-              ticks: {
-                display: true,
-                padding: 10,
-                color: "#fbfbfb",
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: "normal",
-                  lineHeight: 2,
-                },
-              },
-            },
-            x: {
-              grid: {
-                drawBorder: false,
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false,
-                borderDash: [5, 5],
-              },
-              ticks: {
-                display: true,
-                color: "#ccc",
-                padding: 20,
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: "normal",
-                  lineHeight: 2,
-                },
-              },
-            },
-          },
-        },
-      });
-    </script>
-    <script>
-      var win = navigator.platform.indexOf("Win") > -1;
-      if (win && document.querySelector("#sidenav-scrollbar")) {
-        var options = {
-          damping: "0.5",
-        };
-        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
-      }
-    </script>
-    <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
-  </body>
+  <!-- Modal List -->
+  <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dados do Caso</h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="ph-bold ph-x"></i>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <p class="text-uppercase text-sm">Tipo de serviço</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group d-flex gap-2">
+                  <div class="form-check  text-start">
+                    <input id="locacao" name="servico" class="form-check-input" type="radio" checked>
+                    <label for="locacao" name="servico">Locação</label>
+                  </div>
+                  <div class="form-check text-start">
+                    <input id="venda" name="servico" class="form-check-input" type="radio" disabled>
+                    <label for="venda" name="servico">Venda</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Objetivo/Período</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group d-flex gap-2" id="tipo-servico">
+                  <div class="form-check  text-start">
+                    <input id="residencial" name="objetivo" class="form-check-input" type="radio" checked>
+                    <label for="residencial" name="objetivo">Residencial</label>
+                  </div>
+                  <div class="form-check text-start">
+                    <input id="comercial" name="objetivo" class="form-check-input" type="radio" disabled>
+                    <label for="comercial" name="objetivo">Comercial</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="periodo">Período</label>
+                  <select class="form-control" id="periodo" name="periodo" disabled>
+                    <option value="30">30 MESES</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Garantia</p>
+            <div class="row" id="tipo-garantia">
+              <div class="col-md-4">
+                <!-- Caução -->
+                <div class="form-check text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="caucao" disabled />
+                  <label class="custom-control-label" for="caucao">Caução</label>
+                </div>
+                <!-- Fiador -->
+                <div class="form-check  text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="fiador" disabled />
+                  <label class="custom-control-label" for="fiador">Fiador</label>
+                </div>
+                <!-- Seguro Fiança -->
+                <div class="form-check  text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="seguro-fianca" disabled />
+                  <label class="custom-control-label" for="seguro-fianca">Seguro Fiança</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <!-- Título de capitação -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="titulo-capitacao" disabled />
+                  <label class="custom-control-label" for="titulo-capitacao">Título de capitação</label>
+                </div>
+                <!-- Fiança Credpago -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-credpago" disabled />
+                  <label class="custom-control-label" for="fianca-credpago">Fiança Credpago</label>
+                </div>
+                <!-- Fiança Velo -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-velo" disabled />
+                  <label class="custom-control-label" for="fianca-velo">Fiança Velo</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <!-- Fiança Doculoc -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-doculoc" disabled />
+                  <label class="custom-control-label" for="fianca-doculoc">Fiança Doculoc</label>
+                </div>
+                <!-- Fiança Outros -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-outro" disabled />
+                  <label class="custom-control-label" for="fianca-outro">Fiança Outros</label>
+                </div>
+                <!-- Sem Garantia -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" checked />
+                  <label class="custom-control-label" for="sem-garantia">Sem Garantia</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4" id="garantia-selecionada"></div>
+
+            <hr class="horizontal dark">
+
+            <p class="text-uppercase text-sm">Adicional</p>
+            <!-- First Row -->
+            <div class="row">
+              <label class="text-start">Tipo de correção</label>
+              <div class="d-flex gap-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="igpm" checked />
+                  <label class="custom-control-label ms-0" for="igpm">IGPM</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ipca" disabled />
+                  <label class="custom-control-label ms-0" for="ipca">IPCA</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row">
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Quem paga IPTU?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="Locador">Locador</option>
+                  <option value="Locatario">Locatário</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Quem paga o condomínio?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="Locador">Locador</option>
+                  <option value="Locatario">Locatário</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Aceita Pet?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="SIM">SIM</option>
+                  <option value="NAO">NÃO</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Isenção de multa</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="6">06 MESES</option>
+                  <option value="12">12 MESES</option>
+                  <option value="24">24 MESES</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Edit -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Dados do Caso</h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="ph-bold ph-x"></i>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="col-md-12">
+              <p class="text-uppercase text-sm">Tipo de serviço</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group d-flex gap-2">
+                    <div class="form-check  text-start">
+                      <input id="locacao" name="servico" class="form-check-input" type="radio" checked>
+                      <label for="locacao" name="servico">Locação</label>
+                    </div>
+                    <div class="form-check text-start">
+                      <input id="venda" name="servico" class="form-check-input" type="radio" disabled>
+                      <label for="venda" name="servico">Venda</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="horizontal dark">
+              <p class="text-uppercase text-sm">Objetivo/Período</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group d-flex gap-2" id="tipo-servico">
+                    <div class="form-check  text-start">
+                      <input id="residencial" name="objetivo" class="form-check-input" type="radio" checked>
+                      <label for="residencial" name="objetivo">Residencial</label>
+                    </div>
+                    <div class="form-check text-start">
+                      <input id="comercial" name="objetivo" class="form-check-input" type="radio">
+                      <label for="comercial" name="objetivo">Comercial</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="periodo">Período</label>
+                    <select class="form-control" id="periodo" name="periodo">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <hr class="horizontal dark">
+              <p class="text-uppercase text-sm">Garantia</p>
+              <div class="row" id="tipo-garantia">
+                <div class="col-md-4">
+                  <!-- Caução -->
+                  <div class="form-check text-start">
+                    <input class="form-check-input" type="radio" name="tipo" id="caucao" />
+                    <label class="custom-control-label" for="caucao">Caução</label>
+                  </div>
+                  <!-- Fiador -->
+                  <div class="form-check  text-start">
+                    <input class="form-check-input" type="radio" name="tipo" id="fiador" />
+                    <label class="custom-control-label" for="fiador">Fiador</label>
+                  </div>
+                  <!-- Seguro Fiança -->
+                  <div class="form-check  text-start">
+                    <input class="form-check-input" type="radio" name="tipo" id="seguro-fianca" />
+                    <label class="custom-control-label" for="seguro-fianca">Seguro Fiança</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <!-- Título de capitação -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="titulo-capitacao" />
+                    <label class="custom-control-label" for="titulo-capitacao">Título de capitação</label>
+                  </div>
+                  <!-- Fiança Credpago -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-credpago" />
+                    <label class="custom-control-label" for="fianca-credpago">Fiança Credpago</label>
+                  </div>
+                  <!-- Fiança Velo -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-velo" />
+                    <label class="custom-control-label" for="fianca-velo">Fiança Velo</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <!-- Fiança Doculoc -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-doculoc" />
+                    <label class="custom-control-label" for="fianca-doculoc">Fiança Doculoc</label>
+                  </div>
+                  <!-- Fiança Outros -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-outro" />
+                    <label class="custom-control-label" for="fianca-outro">Fiança Outros</label>
+                  </div>
+                  <!-- Sem Garantia -->
+                  <div class="form-check ps-0 text-start">
+                    <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" checked />
+                    <label class="custom-control-label" for="sem-garantia">Sem Garantia</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4" id="garantia-selecionada"></div>
+
+              <hr class="horizontal dark">
+
+              <p class="text-uppercase text-sm">Adicional</p>
+              <!-- First Row -->
+              <div class="row">
+                <label class="text-start">Tipo de correção</label>
+                <div class="d-flex gap-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="igpm" />
+                    <label class="custom-control-label ms-0" for="igpm">IGPM</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="ipca" />
+                    <label class="custom-control-label ms-0" for="ipca">IPCA</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Row -->
+              <div class="row">
+                <div class="form-group col-12 col-sm-6 text-start">
+                  <label for="correcao">Quem paga IPTU?</label>
+                  <select class="form-control" id="correcao" name="tipo">
+                    <option value="Locador">Locador</option>
+                    <option value="Locatario">Locatário</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 col-sm-6 text-start">
+                  <label for="correcao">Quem paga o condomínio?</label>
+                  <select class="form-control" id="correcao" name="tipo">
+                    <option value="Locador">Locador</option>
+                    <option value="Locatario">Locatário</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 col-sm-6 text-start">
+                  <label for="correcao">Aceita Pet?</label>
+                  <select class="form-control" id="correcao" name="tipo">
+                    <option value="SIM">SIM</option>
+                    <option value="NAO">NÃO</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 col-sm-6 text-start">
+                  <label for="correcao">Isenção de multa</label>
+                  <select class="form-control" id="correcao" name="tipo">
+                    <option value="6">06 MESES</option>
+                    <option value="12">12 MESES</option>
+                    <option value="24">24 MESES</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+            Fechar
+          </button>
+          <button type="button" class="btn btn-info">
+            Salvar alterações
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Delete -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+    aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title-notification">
+            Essa ação não é reversível!
+          </h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="ph-bold ph-x"></i>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="py-3 text-center">
+            <i class="ni ni-bell-55 ni-3x"></i>
+            <h4 class="text-gradient text-danger mt-4">Leia com atenção!</h4>
+            <p>
+              Você está prestes a&nbsp;<span class="text-danger font-weight-bolder">deletar</span>&nbsp;o caso
+              <span class="font-weight-bolder">A123</span>. Para
+              confirmar clique no botão deletar.
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-danger">Deletar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/popper.min.js"></script>
+  <script src="../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+</body>
+
+
+<script>
+  const tipoServico = document.getElementById("tipo-servico");
+  const residencial = document.getElementById("residencial");
+  const comercial = document.getElementById("comercial");
+  const periodo = document.getElementById("periodo");
+
+  const tipoGarantia = document.getElementById("tipo-garantia");
+  const caucao = document.getElementById("caucao");
+  const fiador = document.getElementById("fiador");
+  const seguroFianca = document.getElementById("seguro-fianca");
+  const tituloCapitacao = document.getElementById("titulo-capitacao")
+  const credpago = document.getElementById("fianca-credpago")
+  const velo = document.getElementById("fianca-velo")
+  const doculoc = document.getElementById("fianca-doculoc")
+  const outros = document.getElementById("fianca-outro")
+  const semGarantia = document.getElementById("sem-garantia")
+
+  const garantiaSelecionada = document.getElementById("garantia-selecionada");
+
+  // Tipo Locacao
+  tipoServico.addEventListener("change", function () {
+    if (residencial.checked) {
+      periodo.innerHTML = `
+        <option value="30">30 MESES</option>
+        <option value="36">36 MESES</option>
+        <option value="48">48 MESES</option>
+        <option value="60">60 MESES</option>
+      `;
+      ramo.style.display = "none";
+    } else if (comercial.checked) {
+      periodo.innerHTML = `
+        <option value="12">12 MESES</option>
+        <option value="24">24 MESES</option>
+        <option value="36">36 MESES</option>
+        <option value="48">48 MESES</option>
+        <option value="60">60 MESES</option>
+      `;
+      ramo.style.display = "block";
+    }
+  });
+
+  // Tipo Garantia
+  tipoGarantia.addEventListener("change", function () {
+    if (caucao.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="row">
+          <div class="form-group text-start col-6">
+            <label for="periodo">Quantos Alugueis</label>
+            <select
+              class="form-control w-full"
+              id="quantos-alugueis"
+              name="alugueis"
+            >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group text-start col-6">
+            <label for="value">Valor</label>
+            <input 
+              class="form-control"
+              id="value"
+              name="value"
+              type="text"
+              placeholder="Digite o valor dos alugueis mensais"
+            />
+          </div>
+        </div>
+        `;
+    }
+    if (fiador.checked) {
+      garantiaSelecionada.innerHTML = `
+          <div class="row">
+            <h6>Estado Civil</h6>
+            <div class="d-flex justify-content-center gap-4">
+              <div class="form-check ps-0">
+                <label class="custom-control-label" for="solteiro">Solteiro</label>
+                <input class="form-check-input ms-0" type="radio" name="civil" id="solteiro" />
+              </div>
+              <div class="form-check ps-0">
+                <label class="custom-control-label" for="casado">Casado</label>
+                <input class="form-check-input ms-0" type="radio" name="civil" id="casado" />
+              </div>
+            </div>  
+            
+          </div>
+        `;
+    }
+    if (seguroFianca.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="form-control-label" for="nome">Corretor(a)</label>
+              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="cpnj">CNPJ</label>
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label" for="pac">Nº PAC</label>
+            <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
+              <input type="file" class="form-control" id="apolice" name="apolice"/>
+          </div>
+        </div>
+        `;
+    }
+    if (tituloCapitacao.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="form-control-label" for="nome">Corretor(a)</label>
+              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="cpnj">CNPJ</label>
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label" for="pac">Nº PAC</label>
+            <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
+              <input type="file" class="form-control" id="apolice" name="apolice"/>
+          </div>
+        </div>
+        `
+    }
+    if (credpago.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="row">
+          <div class="form-group text-start col-12">
+              <label class="form-control-label" for="apolice">Anexar arquivo</label>
+              <input type="file" class="form-control" id="apolice" name="apolice" />
+          </div>
+        </div>
+        `
+    }
+    if (velo.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="row">
+          <div class="form-group text-start col-12">
+              <label class="form-control-label" for="apolice">Anexar arquivo</label>
+              <input type="file" class="form-control" id="apolice" name="apolice" />
+          </div>
+        </div>
+        `
+    }
+    if (doculoc.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="row">
+          <div class="form-group text-start col-12">
+              <label class="form-control-label" for="apolice">Anexar arquivo</label>
+              <input type="file" class="form-control" id="apolice" name="apolice" />
+          </div>
+        </div>
+        `
+    }
+    if (outros.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="form-control-label" for="nome">Corretor(a)</label>
+              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="cpnj">CNPJ</label>
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label" for="pac">Nº PAC</label>
+            <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
+              <input type="file" class="form-control" id="apolice" name="apolice"/>
+          </div>
+        </div>
+        `
+    }
+    if (semGarantia.checked) {
+      garantiaSelecionada.innerHTML = ""
+    }
+  });
+</script>
+
 </html>
