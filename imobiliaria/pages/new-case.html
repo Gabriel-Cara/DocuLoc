@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <div class="row">
+  <div class="row mw-100 vh-100">
     <div class="col-12 text-center">
       <h3 class="mt-5 text-dark">Cadastro de Novo Caso</h3>
       <h5 class="text-dark font-weight-normal">
@@ -214,31 +214,25 @@
                   <!-- Content -->
 
                   <!-- Tipo -->
-                  <div class="d-grid mt-4 mx-auto" style="
-                        grid-template-columns: 1fr 1fr 1fr;
-                        justify-items: center;
-                      " id="tipo-garantia">
-                    <!-- First Column -->
-                    <div class="d-grid" style="row-gap: 0.5rem">
+                  <div class="row mx-4 mx-xl-8" id="tipo-garantia">
+                    <div class="col-md-4">
                       <!-- Caução -->
-                      <div class="form-check ps-0 text-start">
-                        <input class="form-check-input ms-0" type="radio" name="tipo" id="caucao" />
+                      <div class="form-check text-start">
+                        <input class="form-check-input" type="radio" name="tipo" id="caucao" />
                         <label class="custom-control-label" for="caucao">Caução</label>
                       </div>
                       <!-- Fiador -->
-                      <div class="form-check ps-0 text-start">
-                        <input class="form-check-input ms-0" type="radio" name="tipo" id="fiador" />
+                      <div class="form-check  text-start">
+                        <input class="form-check-input" type="radio" name="tipo" id="fiador" />
                         <label class="custom-control-label" for="fiador">Fiador</label>
                       </div>
                       <!-- Seguro Fiança -->
-                      <div class="form-check ps-0 text-start">
-                        <input class="form-check-input ms-0" type="radio" name="tipo" id="seguro-fianca" />
+                      <div class="form-check  text-start">
+                        <input class="form-check-input" type="radio" name="tipo" id="seguro-fianca" />
                         <label class="custom-control-label" for="seguro-fianca">Seguro Fiança</label>
                       </div>
                     </div>
-
-                    <!-- Second Column -->
-                    <div class="d-grid" style="row-gap: 0.5rem">
+                    <div class="col-md-4">
                       <!-- Título de capitação -->
                       <div class="form-check ps-0 text-start">
                         <input class="form-check-input ms-0" type="radio" name="tipo" id="titulo-capitacao" />
@@ -255,9 +249,7 @@
                         <label class="custom-control-label" for="fianca-velo">Fiança Velo</label>
                       </div>
                     </div>
-
-                    <!-- Thirth Column -->
-                    <div class="d-grid" style="row-gap: 0.5rem">
+                    <div class="col-md-4">
                       <!-- Fiança Doculoc -->
                       <div class="form-check ps-0 text-start">
                         <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-doculoc" />
@@ -270,13 +262,13 @@
                       </div>
                       <!-- Sem Garantia -->
                       <div class="form-check ps-0 text-start">
-                        <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" />
+                        <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" checked />
                         <label class="custom-control-label" for="sem-garantia">Sem Garantia</label>
                       </div>
                     </div>
                   </div>
 
-                  <div class="mt-4" id="garantia-selecionada"></div>
+                  <div class="row mt-4 mx-4 mx-xl-8" id="garantia-selecionada"></div>
 
                   <!-- Footer -->
                   <div class="button-row d-flex mt-4 col-12">
@@ -415,217 +407,192 @@
   tipoGarantia.addEventListener("change", function () {
     if (caucao.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group text-start">
-              <label for="periodo">Quantos aluguéis</label>
-              <select class="form-control w-full" id="quantos-alugueis" name="alugueis" >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="form-group text-start">
-              <label for="value">Valor</label>
-              <input class="form-control" id="value" name="value" type="text" placeholder="Digite o valor dos aluguéis mensais" />
-            </div>
-          </div>
-
-          <div class="col-md-12">
-            <div class="form-group text-start">
-              <label class="form-control-label" for="apolice">Anexar comprovante de pagamento</label>
-              <input type="file" class="form-control" id="apolice" name="apolice"/>
-            </div>
+        <div class="col-md-6">
+          <div class="form-group text-start">
+            <label for="periodo">Quantos aluguéis</label>
+            <select class="form-control w-full" id="quantos-alugueis" name="alugueis">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
           </div>
         </div>
-        <div>
-        `;
+
+        <div class="col-md-6">
+          <div class="form-group text-start">
+            <label for="value">Valor</label>
+            <input class="form-control" id="value" name="value" type="text" placeholder="Digite o valor dos aluguéis mensais">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group text-start">
+            <label class="form-control-label" for="apolice">Anexar comprovante de pagamento</label>
+            <input type="file" class="form-control" id="apolice" name="apolice">
+          </div>
+        </div>
+      `;
     }
     if (fiador.checked) {
       garantiaSelecionada.innerHTML = `
-          <div class="row">
-            <div class="col-md-2 text-start">
-              <label class="text-start">Estado Civil</label>
-              <div class="d-flex justify-content-start gap-4">
-                <div class="form-check ps-0">
-                  <label class="custom-control-label" for="solteiro">Solteiro</label>
-                  <input class="form-check-input ms-0" type="radio" name="civil" id="solteiro" />
-                </div>
-                <div class="form-check ps-0">
-                  <label class="custom-control-label" for="casado">Casado</label>
-                  <input class="form-check-input ms-0" type="radio" name="civil" id="casado" />
-                </div>
-              </div>
+        <div class="col-md-12 text-start">
+          <label class="text-start">Estado Civil</label>
+          <div class="d-flex justify-content-start gap-4">
+            <div class="form-check ps-0">
+              <label class="custom-control-label" for="solteiro">Solteiro</label>
+              <input class="form-check-input ms-0" type="radio" name="civil" id="solteiro">
             </div>
-            <div class="col-md-8">
-              <div class="form-group text-start">
-                <label class="form-control-label" for="apolice">Anexar apólice</label>
-                <input type="file" class="form-control" id="apolice" name="apolice"/>
-              </div>
+            <div class="form-check ps-0">
+              <label class="custom-control-label" for="casado">Casado</label>
+              <input class="form-check-input ms-0" type="radio" name="civil" id="casado">
             </div>
           </div>
-        `;
+        </div>
+        <div class="col-md-12">
+          <div class="form-group text-start">
+            <label class="form-control-label" for="apolice">Anexar apólice</label>
+            <input type="file" class="form-control" id="apolice" name="apolice">
+          </div>
+        </div>
+      `;
     }
     if (seguroFianca.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-check text-start col-4">
-            <label class="form-control-label" for="name">Nome do(a) Corretor(a)</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Digite aqui o nome do(a) corretor(a)."
-            >
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="nome">Corretor(a)</label>
+            <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
           </div>
+        </div>
 
-          <div class="form-group text-start col-4">
+        <div class="col-md-4">
+          <div class="form-group">
             <label class="form-control-label" for="cpnj">CNPJ</label>
-            <input 
-              class="form-control"
-              id="cpnj"
-              type="text"
-              placeholder="Digite o CNPJ"
-            />
-          </div>
-
-          <div class="form-group text-start col-4">
-            <label class="form-control-label" for="date-approved">Data da aprovação</label>
-            <input 
-              class="form-control"
-              id="date-approved"
-              type="date"
-            />
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
           </div>
         </div>
-        <div class="row">
-          <div class="form-group text-start col-6">
-            <label class="form-control-label" for="pac">Nº PAC</label>
-            <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
-          </div>
-          <div class="form-group text-start col-6">
-              <label class="form-control-label" for="apolice">Anexar apólice</label>
-              <input type="file" class="form-control" id="apolice" name="apolice"/>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
           </div>
         </div>
-        `;
-    }
-    if (tituloCapitacao.checked) {
-      garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-check text-start col-4">
-            <label class="form-control-label" for="name">Nome do(a) Corretor(a)</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Digite aqui o nome do(a) corretor(a)."
-            >
-          </div>
-
-          <div class="form-group text-start col-4">
-            <label class="form-control-label" for="cpnj">CNPJ</label>
-            <input 
-              class="form-control"
-              id="cpnj"
-              type="text"
-              placeholder="Digite o CNPJ"
-            />
-          </div>
-
-          <div class="form-group text-start col-4">
-            <label class="form-control-label" for="date-approved">Data da aprovação</label>
-            <input 
-              class="form-control"
-              id="date-approved"
-              type="date"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group text-start col-6">
+        <div class="col-md-12">
+          <div class="form-group">
             <label class="form-control-label" for="pac">Nº PAC</label>
             <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
             </div>
-            <div class="form-group text-start col-6">
-              <label class="form-control-label" for="apolice">Anexar apólice</label>
-              <input type="file" class="form-control" id="apolice" name="apolice" />
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
+              <input type="file" class="form-control" id="apolice" name="apolice"/>
+          </div>
+        </div>
+      `;
+    }
+    if (tituloCapitacao.checked) {
+      garantiaSelecionada.innerHTML = `
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="form-control-label" for="nome">Corretor(a)</label>
+              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="cpnj">CNPJ</label>
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label" for="pac">Nº PAC</label>
+            <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
+              <input type="file" class="form-control" id="apolice" name="apolice"/>
           </div>
         </div>
         `
     }
     if (credpago.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (velo.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (doculoc.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (outros.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-check text-start col-4">
-            <label class="form-control-label" for="name">Nome do(a) Corretor(a)</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Digite aqui o nome do(a) corretor(a)."
-            >
-          </div>
-
-          <div class="form-group text-start col-4">
-            <label class="form-control-label" for="cpnj">CNPJ</label>
-            <input 
-              class="form-control"
-              id="cpnj"
-              type="text"
-              placeholder="Digite o CNPJ"
-            />
-          </div>
-
-          <div class="form-group text-start col-4">
-            <label class="form-control-label" for="date-approved">Data da aprovação</label>
-            <input 
-              class="form-control"
-              id="date-approved"
-              type="date"
-            />
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="form-control-label" for="nome">Corretor(a)</label>
+              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="form-group text-start col-6">
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="form-control-label" for="cpnj">CNPJ</label>
+            <input class="form-control" id="cpnj" type="text" placeholder="Digite o CNPJ"/>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="date-aprovation" class="form-control-label">Data da aprovação</label>
+            <input class="form-control" type="date" id="date-aprovation">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
             <label class="form-control-label" for="pac">Nº PAC</label>
             <input type="text" class="form-control" id="pac" placeholder="Digite aqui o número do PAC" />
             </div>
-            <div class="form-group text-start col-6">
-              <label class="form-control-label" for="apolice">Anexar apólice</label>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-control-label" for="pac">Anexar apólice</label>
               <input type="file" class="form-control" id="apolice" name="apolice"/>
           </div>
         </div>

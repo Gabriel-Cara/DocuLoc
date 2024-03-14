@@ -462,179 +462,7 @@
     <!-- End Content -->
   </main>
 
-
-  <!-- Modal List -->
-  <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Dados do Caso</h5>
-          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">
-              <i class="ph-bold ph-x"></i>
-            </span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-12">
-            <p class="text-uppercase text-sm">Tipo de serviço</p>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group d-flex gap-2">
-                  <div class="form-check  text-start">
-                    <input id="locacao" name="servico" class="form-check-input" type="radio" checked>
-                    <label for="locacao" name="servico">Locação</label>
-                  </div>
-                  <div class="form-check text-start">
-                    <input id="venda" name="servico" class="form-check-input" type="radio" disabled>
-                    <label for="venda" name="servico">Venda</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr class="horizontal dark">
-            <p class="text-uppercase text-sm">Objetivo/Período</p>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group d-flex gap-2" id="tipo-servico">
-                  <div class="form-check  text-start">
-                    <input id="residencial" name="objetivo" class="form-check-input" type="radio" checked>
-                    <label for="residencial" name="objetivo">Residencial</label>
-                  </div>
-                  <div class="form-check text-start">
-                    <input id="comercial" name="objetivo" class="form-check-input" type="radio" disabled>
-                    <label for="comercial" name="objetivo">Comercial</label>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label for="periodo">Período</label>
-                  <select class="form-control" id="periodo" name="periodo" disabled>
-                    <option value="30">30 MESES</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <hr class="horizontal dark">
-            <p class="text-uppercase text-sm">Garantia</p>
-            <div class="row" id="tipo-garantia">
-              <div class="col-md-4">
-                <!-- Caução -->
-                <div class="form-check text-start">
-                  <input class="form-check-input" type="radio" name="tipo" id="caucao" disabled />
-                  <label class="custom-control-label" for="caucao">Caução</label>
-                </div>
-                <!-- Fiador -->
-                <div class="form-check  text-start">
-                  <input class="form-check-input" type="radio" name="tipo" id="fiador" disabled />
-                  <label class="custom-control-label" for="fiador">Fiador</label>
-                </div>
-                <!-- Seguro Fiança -->
-                <div class="form-check  text-start">
-                  <input class="form-check-input" type="radio" name="tipo" id="seguro-fianca" disabled />
-                  <label class="custom-control-label" for="seguro-fianca">Seguro Fiança</label>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <!-- Título de capitação -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="titulo-capitacao" disabled />
-                  <label class="custom-control-label" for="titulo-capitacao">Título de capitação</label>
-                </div>
-                <!-- Fiança Credpago -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-credpago" disabled />
-                  <label class="custom-control-label" for="fianca-credpago">Fiança Credpago</label>
-                </div>
-                <!-- Fiança Velo -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-velo" disabled />
-                  <label class="custom-control-label" for="fianca-velo">Fiança Velo</label>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <!-- Fiança Doculoc -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-doculoc" disabled />
-                  <label class="custom-control-label" for="fianca-doculoc">Fiança Doculoc</label>
-                </div>
-                <!-- Fiança Outros -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-outro" disabled />
-                  <label class="custom-control-label" for="fianca-outro">Fiança Outros</label>
-                </div>
-                <!-- Sem Garantia -->
-                <div class="form-check ps-0 text-start">
-                  <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" checked />
-                  <label class="custom-control-label" for="sem-garantia">Sem Garantia</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="row mt-4" id="garantia-selecionada"></div>
-
-            <hr class="horizontal dark">
-
-            <p class="text-uppercase text-sm">Adicional</p>
-            <!-- First Row -->
-            <div class="row">
-              <label class="text-start">Tipo de correção</label>
-              <div class="d-flex gap-4">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="igpm" checked />
-                  <label class="custom-control-label ms-0" for="igpm">IGPM</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ipca" disabled />
-                  <label class="custom-control-label ms-0" for="ipca">IPCA</label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Second Row -->
-            <div class="row">
-              <div class="form-group col-12 col-sm-6 text-start">
-                <label for="correcao">Quem paga IPTU?</label>
-                <select class="form-control" id="correcao" name="tipo" disabled>
-                  <option value="Locador">Locador</option>
-                  <option value="Locatario">Locatário</option>
-                </select>
-              </div>
-              <div class="form-group col-12 col-sm-6 text-start">
-                <label for="correcao">Quem paga o condomínio?</label>
-                <select class="form-control" id="correcao" name="tipo" disabled>
-                  <option value="Locador">Locador</option>
-                  <option value="Locatario">Locatário</option>
-                </select>
-              </div>
-              <div class="form-group col-12 col-sm-6 text-start">
-                <label for="correcao">Aceita Pet?</label>
-                <select class="form-control" id="correcao" name="tipo" disabled>
-                  <option value="SIM">SIM</option>
-                  <option value="NAO">NÃO</option>
-                </select>
-              </div>
-              <div class="form-group col-12 col-sm-6 text-start">
-                <label for="correcao">Isenção de multa</label>
-                <select class="form-control" id="correcao" name="tipo" disabled>
-                  <option value="6">06 MESES</option>
-                  <option value="12">12 MESES</option>
-                  <option value="24">24 MESES</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- Modal Edit -->
   <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -813,6 +641,179 @@
     </div>
   </div>
 
+  <!-- Modal List -->
+  <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dados do Caso</h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="ph-bold ph-x"></i>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <p class="text-uppercase text-sm">Tipo de serviço</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group d-flex gap-2">
+                  <div class="form-check  text-start">
+                    <input id="locacao" name="servico" class="form-check-input" type="radio" checked>
+                    <label for="locacao" name="servico">Locação</label>
+                  </div>
+                  <div class="form-check text-start">
+                    <input id="venda" name="servico" class="form-check-input" type="radio" disabled>
+                    <label for="venda" name="servico">Venda</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Objetivo/Período</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group d-flex gap-2" id="tipo-servico">
+                  <div class="form-check  text-start">
+                    <input id="residencial" name="objetivo" class="form-check-input" type="radio" checked>
+                    <label for="residencial" name="objetivo">Residencial</label>
+                  </div>
+                  <div class="form-check text-start">
+                    <input id="comercial" name="objetivo" class="form-check-input" type="radio" disabled>
+                    <label for="comercial" name="objetivo">Comercial</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="periodo">Período</label>
+                  <select class="form-control" id="periodo" name="periodo" disabled>
+                    <option value="30">30 MESES</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Garantia</p>
+            <div class="row" id="tipo-garantia">
+              <div class="col-md-4">
+                <!-- Caução -->
+                <div class="form-check text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="caucao" disabled />
+                  <label class="custom-control-label" for="caucao">Caução</label>
+                </div>
+                <!-- Fiador -->
+                <div class="form-check  text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="fiador" disabled />
+                  <label class="custom-control-label" for="fiador">Fiador</label>
+                </div>
+                <!-- Seguro Fiança -->
+                <div class="form-check  text-start">
+                  <input class="form-check-input" type="radio" name="tipo" id="seguro-fianca" disabled />
+                  <label class="custom-control-label" for="seguro-fianca">Seguro Fiança</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <!-- Título de capitação -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="titulo-capitacao" disabled />
+                  <label class="custom-control-label" for="titulo-capitacao">Título de capitação</label>
+                </div>
+                <!-- Fiança Credpago -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-credpago" disabled />
+                  <label class="custom-control-label" for="fianca-credpago">Fiança Credpago</label>
+                </div>
+                <!-- Fiança Velo -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-velo" disabled />
+                  <label class="custom-control-label" for="fianca-velo">Fiança Velo</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <!-- Fiança Doculoc -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-doculoc" disabled />
+                  <label class="custom-control-label" for="fianca-doculoc">Fiança Doculoc</label>
+                </div>
+                <!-- Fiança Outros -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="fianca-outro" disabled />
+                  <label class="custom-control-label" for="fianca-outro">Fiança Outros</label>
+                </div>
+                <!-- Sem Garantia -->
+                <div class="form-check ps-0 text-start">
+                  <input class="form-check-input ms-0" type="radio" name="tipo" id="sem-garantia" checked />
+                  <label class="custom-control-label" for="sem-garantia">Sem Garantia</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4" id="garantia-selecionada"></div>
+
+            <hr class="horizontal dark">
+
+            <p class="text-uppercase text-sm">Adicional</p>
+            <!-- First Row -->
+            <div class="row">
+              <label class="text-start">Tipo de correção</label>
+              <div class="d-flex gap-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="igpm" checked />
+                  <label class="custom-control-label ms-0" for="igpm">IGPM</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ipca" disabled />
+                  <label class="custom-control-label ms-0" for="ipca">IPCA</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row">
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Quem paga IPTU?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="Locador">Locador</option>
+                  <option value="Locatario">Locatário</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Quem paga o condomínio?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="Locador">Locador</option>
+                  <option value="Locatario">Locatário</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Aceita Pet?</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="SIM">SIM</option>
+                  <option value="NAO">NÃO</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-sm-6 text-start">
+                <label for="correcao">Isenção de multa</label>
+                <select class="form-control" id="correcao" name="tipo" disabled>
+                  <option value="6">06 MESES</option>
+                  <option value="12">12 MESES</option>
+                  <option value="24">24 MESES</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal Delete -->
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
     aria-hidden="true">
@@ -909,59 +910,61 @@
   tipoGarantia.addEventListener("change", function () {
     if (caucao.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-6">
-            <label for="periodo">Quantos Alugueis</label>
-            <select
-              class="form-control w-full"
-              id="quantos-alugueis"
-              name="alugueis"
-            >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <div class="col-md-6">
+          <div class="form-group text-start">
+            <label for="periodo">Quantos aluguéis</label>
+            <select class="form-control w-full" id="quantos-alugueis" name="alugueis">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </div>
+        </div>
 
-          <div class="form-group text-start col-6">
+        <div class="col-md-6">
+          <div class="form-group text-start">
             <label for="value">Valor</label>
-            <input 
-              class="form-control"
-              id="value"
-              name="value"
-              type="text"
-              placeholder="Digite o valor dos alugueis mensais"
-            />
+            <input class="form-control" id="value" name="value" type="text" placeholder="Digite o valor dos aluguéis mensais">
           </div>
         </div>
-        `;
+
+        <div class="col-md-12">
+          <div class="form-group text-start">
+            <label class="form-control-label" for="apolice">Anexar comprovante de pagamento</label>
+            <input type="file" class="form-control" id="apolice" name="apolice">
+          </div>
+        </div>
+      `;
     }
     if (fiador.checked) {
       garantiaSelecionada.innerHTML = `
-          <div class="row">
-            <h6>Estado Civil</h6>
-            <div class="d-flex justify-content-center gap-4">
-              <div class="form-check ps-0">
-                <label class="custom-control-label" for="solteiro">Solteiro</label>
-                <input class="form-check-input ms-0" type="radio" name="civil" id="solteiro" />
-              </div>
-              <div class="form-check ps-0">
-                <label class="custom-control-label" for="casado">Casado</label>
-                <input class="form-check-input ms-0" type="radio" name="civil" id="casado" />
-              </div>
-            </div>  
-            
+        <div class="col-md-12 text-start">
+          <label class="text-start">Estado Civil</label>
+          <div class="d-flex justify-content-start gap-4">
+            <div class="form-check ps-0">
+              <label class="custom-control-label" for="solteiro">Solteiro</label>
+              <input class="form-check-input ms-0" type="radio" name="civil" id="solteiro">
+            </div>
+            <div class="form-check ps-0">
+              <label class="custom-control-label" for="casado">Casado</label>
+              <input class="form-check-input ms-0" type="radio" name="civil" id="casado">
+            </div>
           </div>
-        `;
+        </div>
+        <div class="col-md-12">
+          <div class="form-group text-start">
+            <label class="form-control-label" for="apolice">Anexar apólice</label>
+            <input type="file" class="form-control" id="apolice" name="apolice">
+          </div>
+        </div>
+      `;
     }
     if (seguroFianca.checked) {
       garantiaSelecionada.innerHTML = `
         <div class="col-md-4">
           <div class="form-group">
-            <div class="form-group">
-              <label class="form-control-label" for="nome">Corretor(a)</label>
-              <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
-            </div>
+            <label class="form-control-label" for="nome">Corretor(a)</label>
+            <input class="form-control" id="nome" type="text" placeholder="Digite o nome do corretor(a)"/>
           </div>
         </div>
 
@@ -990,7 +993,7 @@
               <input type="file" class="form-control" id="apolice" name="apolice"/>
           </div>
         </div>
-        `;
+      `;
     }
     if (tituloCapitacao.checked) {
       garantiaSelecionada.innerHTML = `
@@ -1032,33 +1035,33 @@
     }
     if (credpago.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (velo.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (doculoc.checked) {
       garantiaSelecionada.innerHTML = `
-        <div class="row">
-          <div class="form-group text-start col-12">
+        <div class="col-md-12">
+          <div class="form-group">
               <label class="form-control-label" for="apolice">Anexar arquivo</label>
               <input type="file" class="form-control" id="apolice" name="apolice" />
           </div>
         </div>
-        `
+      `
     }
     if (outros.checked) {
       garantiaSelecionada.innerHTML = `
