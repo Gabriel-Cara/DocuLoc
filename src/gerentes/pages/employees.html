@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
   <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
-  <title>DocuLoc | Funcionários - Imobiliária</title>
+  <title>DocuLoc | Funcionários - Gerentes</title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -108,7 +108,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm opacity-5 text-white">
-              Imobiliária
+              Gerentes
             </li>
             <li class="breadcrumb-item text-sm text-white active" aria-current="page">
               Funcionários
@@ -166,9 +166,6 @@
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     Nome/Email
                   </th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                    Cargo
-                  </th>
                   <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     CPF
                   </th>
@@ -198,9 +195,6 @@
                         </p>
                       </div>
                     </div>
-                  </td>
-                  <td class="align-middle text-sm">
-                    <span class="text-secondary text-xs font-weight-bolder">Dono</span>
                   </td>
                   <td class="align-middle text-center">
                     <span class="text-secondary text-xs font-weight-bold">123.123.123-12</span>
@@ -238,9 +232,6 @@
                       </div>
                     </div>
                   </td>
-                  <td class="align-middle text-sm">
-                    <span class="text-secondary text-xs font-weight-bolder">Dono</span>
-                  </td>
                   <td class="align-middle text-center">
                     <span class="text-secondary text-xs font-weight-bold">123.123.123-12</span>
                   </td>
@@ -276,9 +267,6 @@
                         </p>
                       </div>
                     </div>
-                  </td>
-                  <td class="align-middle text-sm">
-                    <span class="text-secondary text-xs font-weight-bolder">Dono</span>
                   </td>
                   <td class="align-middle text-center">
                     <span class="text-secondary text-xs font-weight-bold">123.123.123-12</span>
@@ -327,7 +315,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">
-            Cadastro de usuário
+            Cadastro de Corretor
           </h5>
           <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">
@@ -338,34 +326,25 @@
         <div class="modal-body">
           <form action="POST">
             <div class="row">
-              <div class="form-group">
-                <label for="name">Nome Completo</label>
-                <input type="text" class="form-control teste" id="name" placeholder="Nome Completo" required />
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email corporativo" required />
-              </div>
-            </div>
-
-            <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="cargo">Cargo</label>
-                  <select class="form-control" required>
-                    <option>Gerente</option>
-                    <option>Corretor</option>
-                    <option>Administrativo</option>
-                  </select>
+                  <label for="name">Nome completo</label>
+                  <input type="text" class="form-control teste" id="name" placeholder="Nome Completo" required />
                 </div>
               </div>
+
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="password">Senha</label>
                   <input type="password" class="form-control" id="password" placeholder="Senha" required />
                 </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Email corporativo" required />
               </div>
             </div>
 
@@ -403,7 +382,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Dados do Usuário</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Dados do Corretor</h5>
           <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">
               <i class="ph-bold ph-x"></i>
@@ -415,29 +394,15 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name">Nome</label>
+                  <label for="name">Nome completo</label>
                   <input type="text" class="form-control" id="name" value="Marco Iwanaga" disabled />
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email">E-mail</label>
                   <input type="email" class="form-control" id="email" value="marco.iwanaga@doculoc.com" disabled />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label for="cargo">Cargo</label>
-                  <select class="form-control" disabled>
-                    <option>Dono</option>
-                    <option>Gerente</option>
-                    <option>Corretor</option>
-                    <option>Administrativo</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -494,28 +459,15 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name">Nome</label>
+                  <label for="name">Nome completo</label>
                   <input type="text" class="form-control" id="name" value="Marco Iwanaga" />
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email">E-mail</label>
                   <input type="email" class="form-control" id="email" value="marco.iwanaga@doculoc.com" />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label for="cargo">Cargo</label>
-                  <select class="form-control">
-                    <option>Dono</option>
-                    <option>Gerente</option>
-                    <option>Corretor</option>
-                  </select>
                 </div>
               </div>
             </div>
