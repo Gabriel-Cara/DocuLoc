@@ -5,22 +5,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" />
   <title>DocuLoc | Casos - Gerentes</title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <!-- Nucleo Icons -->
-  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/d8cba989f3.js" crossorigin="anonymous"></script>
-  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <link id="pagestyle" href="../../../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../../components/multistep-form/style.css" />
+  <link rel="stylesheet" href="../../../components/multistep-form/style.css" />
 </head>
 <!-- End Head -->
 
@@ -37,7 +37,7 @@
         aria-hidden="true" id="iconSidenav" style="font-size: 18px;"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
         target="_blank">
-        <img src="../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo" />
+        <img src="../../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo" />
         <span class="ms-1 font-weight-bold">DocuLoc</span>
       </a>
     </div>
@@ -109,7 +109,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm opacity-5 text-white">
-              Gerente
+              Gerentes
             </li>
             <li class="breadcrumb-item text-sm text-white active" aria-current="page">
               Casos
@@ -269,7 +269,7 @@
                       </div>
                       <div class="progress">
                         <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="25"
-                          aria-valuemin="25" aria-valuemax="100" style="width: 25%"></div>
+                          aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                       </div>
                     </div>
                   </td>
@@ -319,7 +319,107 @@
                       </div>
                       <div class="progress">
                         <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="50"
-                          aria-valuemin="50" aria-valuemax="100" style="width: 50%"></div>
+                          aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gustavo Scavassa
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gustavo.scavassa@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">75%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-flex px-2 py-2 gap-3 justify-content-center">
+                    <a class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                        class="ph ph-eye" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="ph ph-pencil" style="font-size: 18px;"></i></a>
+                    <a class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="ph ph-trash" style="font-size: 18px;"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                          class="avatar avatar-sm me-3" />
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-xs">
+                          Gustavo Scavassa
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          gustavo.scavassa@doculoc.com
+                        </p>
+                        <p class="text-xs text-sencodary mb-0 font-weight-bold">
+                          Gerente
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <h6 class="mb-0 text-xs">Gustavo Scavassa</h6>
+                  </td>
+                  <td class="align-middle text-sm">
+                    <span class="text-secondary text-xs font-weight-bolder">Marco Iwanaga</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress-wrapper">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-sm font-weight-bold">100%</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
                       </div>
                     </div>
                   </td>
@@ -744,15 +844,15 @@
   <script src="/assets/vendor/nouislider/js/nouislider.min.js"></script>
 
   <!--   Core JS Files   -->
-  <script src="../../assets/js/core/popper.min.js"></script>
-  <script src="../../assets/js/core/bootstrap.min.js"></script>
-  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/chartjs.min.js"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script src="../../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
 </body>
 
 

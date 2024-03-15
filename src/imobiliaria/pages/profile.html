@@ -6,21 +6,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
   <title>
     DocuLoc | Perfil - Imobiliária
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/d8cba989f3.js" crossorigin="anonymous"></script>
-  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="../../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <link id="pagestyle" href="../../../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 </head>
 <!-- End Head -->
 
@@ -38,7 +38,7 @@
         aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
         target="_blank">
-        <img src="../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="../../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold">DocuLoc</span>
       </a>
     </div>
@@ -193,14 +193,14 @@
         <div class="tab-content" id="myTabContent">
 
           <!-- Tab 1 -->
-          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+          <div class="tab-pane fade show active tab-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
             tabindex="0">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header pb-0">
                   <div class="d-flex align-items-center">
                     <h4 class="mb-0">Dados da Imoboliária</h4>
-                    <button class="btn btn-primary btn-sm ms-auto">Alterar dados</button>
+                    <button id="btn-edit-imobiliaria" class="btn btn-primary btn-sm ms-auto">Alterar dados</button>
                   </div>
                 </div>
                 <div class="card-body">
@@ -271,13 +271,13 @@
           </div>
 
           <!-- Tab 2 -->
-          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          <div class="tab-pane fade tab-2" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header pb-0">
                   <div class="d-flex align-items-center">
                     <h4 class="mb-0">Dados do Representante Legal</h4>
-                    <button class="btn btn-primary btn-sm ms-auto">Alterar dados</button>
+                    <button id="btn-edit-responsavel" class="btn btn-primary btn-sm ms-auto">Alterar dados</button>
                   </div>
                 </div>
                 <div class="card-body">
@@ -331,11 +331,11 @@
   </main>
 
   <!--   Core JS Files   -->
-  <script src="../../assets/js/core/popper.min.js"></script>
-  <script src="../../assets/js/core/bootstrap.min.js"></script>
-  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/chartjs.min.js"></script>
   <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 
@@ -420,6 +420,27 @@
     });
   </script>
   <script>
+    // Seleciona todos os inputs
+    const inputsFirstTab = document.querySelectorAll('.tab-1 input');
+    const inputsSecondTab = document.querySelectorAll('.tab-2 input');
+    const btnEditImobiliaria = document.querySelector('#btn-edit-imobiliaria');
+    const btnEditResponsavel = document.querySelector('#btn-edit-responsavel');
+
+    btnEditImobiliaria.addEventListener('click', () => {
+        // Altera o atributo disabled de todos os inputs
+        inputsFirstTab.forEach(input => {
+            input.disabled = !input.disabled;
+        });
+    });
+    
+    btnEditResponsavel.addEventListener('click', () => {
+        // Altera o atributo disabled de todos os inputs
+        inputsSecondTab.forEach(input => {
+            input.disabled = !input.disabled;
+        });
+    });
+  </script>
+  <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
@@ -431,5 +452,5 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script src="../../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
 </body>
