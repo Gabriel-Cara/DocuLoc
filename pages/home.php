@@ -1,6 +1,7 @@
 <?php
     include($_SERVER['DOCUMENT_ROOT'].'/lib/config.php');
     include($_SERVER['DOCUMENT_ROOT'].'/lib/conn.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/lib/global_functions.php');
 
     $name_page = ucfirst("home");
 
