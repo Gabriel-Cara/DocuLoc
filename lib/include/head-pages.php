@@ -1,0 +1,42 @@
+<?php
+    function desconectar() {
+        setcookie('user', '', time() - 3600, '/');
+        setcookie('token', '', time() - 3600, '/');
+        setcookie('access', '', time() - 3600, '/');
+
+        session_start();
+        session_destroy();
+
+        header('location: .'.PATHURL.'login.php');
+        exit();
+    }
+
+    if ($_REQUEST['sair'] == 1) {
+        desconectar();
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href=".<?=PATHURL;?>assets/img/logos/logomarca.png">
+    <link rel="icon" type="image/png" href=".<?=PATHURL;?>assets/img/logos/logomarca.png">
+
+    <title>DocuLoc | <?=$name_page;?></title>
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href=".<?=PATHURL;?>assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href=".<?=PATHURL;?>assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href=".<?=PATHURL;?>assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href=".<?=PATHURL;?>assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>

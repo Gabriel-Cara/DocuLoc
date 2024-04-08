@@ -10684,11 +10684,6 @@ fieldset:disabled .btn {
   background-image: var(--bs-gradient) !important;
 }
 
-.bg-coming {
-  background: url('../img/background/coming-pattern.svg') center no-repeat;
-  z-index: -10;
-}
-
 .user-select-all {
   user-select: all !important;
 }
@@ -26947,4 +26942,8 @@ pre[class*="language-"] {
   }
 }
 
-/*# sourceMappingURL=dashboard-free.css.map */
+/* Genesis Dev Studio */
+.pointer-cursor {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
