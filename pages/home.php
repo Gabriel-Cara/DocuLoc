@@ -3,6 +3,10 @@
     include($_SERVER['DOCUMENT_ROOT'].'/lib/conn.php');
 
     $name_page = ucfirst("home");
+
+    if ($_REQUEST['sair'] == 1) {
+        desconectar();
+    }
 ?>
 
 <?php require_once('.'.PATHURL.'lib/include/head-pages.php'); ?>

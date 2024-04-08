@@ -99,7 +99,7 @@
                     }
                 }
 
-                exit();
+                exit("parou aqui.");
             }
         }
     }
