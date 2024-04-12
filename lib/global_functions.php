@@ -12,7 +12,7 @@
     }
 
     function validate() {
-        if (($_COOKIE['token'] == '' || empty($_COOKIE['token']) || !isset($_COOKIE['token'])) || ($_SESSION['token'] == '' || empty($_SESSION['token']) || !isset($_SESSION['token']))) {
+        if ($_COOKIE['token'] == '' || empty($_COOKIE['token']) || !isset($_COOKIE['token'])) {
             header('location: .'.PATHURL.'login.php');
             exit();
         }

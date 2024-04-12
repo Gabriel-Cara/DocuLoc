@@ -88,18 +88,20 @@
 
                 $recuperar_conta = disparaEmail($dados_email);
 
-                if ($recuperar_conta == 'dados_null') {
+                if (is_array($recuperar_conta)) {
                     $erro = 1;
-                    $msg_error = 'Erro ao enviar o email de recuperação, tente mais tarde.';
                 } else {
-                    if ($recuperar_conta === true) {
-                        echo "Email de recuperação enviado.";
-                    } else {
-                        echo "Erro ao recuperar conta.";
+                    $sql = "UPDATE {$table_prefix}users SET user_password=? WHERE user_email=? AND user_login=?";
+                    $statement = $pdo->prepare($sql);
+                    $statement->bindValue(1, md5($senha_provisoria));
+                    $statement->bindValue(2, $email_form);
+                    $statement->bindValue(3, $email_crypt);
+
+                    if ($statement->execute() !== false) {
+                        $sucesso = 1;
+                        $msg_sucesso = "Em breve receberá um e-mail de recuperação de conta no email informado!";
                     }
                 }
-
-                exit("parou aqui.");
             }
         }
     }

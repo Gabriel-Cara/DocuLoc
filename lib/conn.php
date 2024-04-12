@@ -4,5 +4,9 @@
     $db_pass = 'Victor0206*';
     $db_name = 'doculo09_app';
 
-    $pdo = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_pass);
+    try {
+        $pdo = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_pass);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
 ?>
