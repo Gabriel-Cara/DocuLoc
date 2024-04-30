@@ -4,6 +4,9 @@
 <script src=".<?=PATHURL;?>assets/js/plugins/perfect-scrollbar.min.js"></script>
 <script src=".<?=PATHURL;?>assets/js/plugins/smooth-scrollbar.min.js"></script>
 <script src=".<?=PATHURL;?>assets/js/plugins/chartjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+<script src=".<?=PATHURL;?>assets/js/customized/crop-image.js"></script>
 
 <!-- Script dos gráficos -->
 <script>
