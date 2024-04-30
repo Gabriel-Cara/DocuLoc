@@ -50,7 +50,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <?php if($name_page == 'Perfil'){ echo 'active'; } ?>" href="<?=PATHURL;?>perfil.php">
+                <a class="nav-link <?php if($name_page == 'Perfil'){ echo 'active'; } ?>" href="<?=PATHURL;?>profile.php">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ph ph-user-circle text-dark text-lg opacity-10"></i>
                     </div>
