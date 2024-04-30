@@ -18,7 +18,7 @@
     <?php require_once('.'.PATHURL.'pages/components/sidebar.php'); ?>
 
     <main class="main-content position-relative border-radius-lg">
-    <?php require_once('.'.PATHURL.'pages/components/navbar.php'); ?>
+      <?php require_once('.'.PATHURL.'pages/components/navbar.php'); ?>
 
       <!-- Content -->
       <div class="container-fluid py-4">

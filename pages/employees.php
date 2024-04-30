@@ -1,54 +1,24 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'].'/assets/includes/config.php');
-  include($_SERVER['DOCUMENT_ROOT'].'/assets/includes/validate.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/lib/config.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/lib/conn.php');
+  include($_SERVER['DOCUMENT_ROOT'].'/lib/global_functions.php');
+  validate();
 
   $name_page = ucfirst("funcionarios");
 
-  if (isset($_GET['e'])) {
-    $error = 1;
-
-    $e = $_GET['e'];
-
-    switch ($e){
-      case 1:
-        $msg_error = 'Erro ao criar o funcionário, tente mais tarde.';
-        break;
-      case 2:
-        $msg_error = 'Erro ao editar o funcionário, senhas não são iguais.';
-        break;
-      case 3:
-        $msg_error = 'Erro ao editar o funcionário, digite a senha de confirmação.';
-        break;
-      default:
-        $msg_error = 'Erro ao editar o funcionário.';
-        break;
-    }
-  }
-
-  if (isset($_GET['s'])) {
-    $success = 1;
-
-    $s = $_GET['s'];
-
-    switch ($s){
-      case 1:
-        $msg_success = 'Funcionário cadastrado com sucesso.';
-        break;
-      default:
-        $msg_success = 'Funcionário editado com sucesso.';
-        break;
-    }
+  if ($_REQUEST['sair'] == 1) {
+    desconectar();
   }
 ?>
-  <?php require_once __DIR__ . '/components/head.php'; ?>
+  <?php require_once('.'.PATHURL.'lib/include/head-pages.php'); ?>
 
   <body class="g-sidenav-show bg-gray-100">
     <div class="min-height-300 bg-gradient-warning position-absolute w-100"></div>
 
-    <?php require_once __DIR__ . '/components/sidebar.php'; ?>
+    <?php require_once('.'.PATHURL.'pages/components/sidebar.php'); ?>
 
     <main class="main-content position-relative border-radius-lg">
-      <?php require_once __DIR__ . '/components/navbar.php'; ?>
+      <?php require_once('.'.PATHURL.'pages/components/navbar.php'); ?>
 
       <!-- Alerts for modals -->
       <?php require_once __DIR__ . '/components/employees_alerts.php'; ?>
@@ -70,7 +40,6 @@
 
             <!-- Body -->
             <div class="table-responsive">
-              <?php /** @var DocuLoc\Sys\Entity\Employee[] $employeeList */ ?>
               <table class="table align-items-center mb-0">
                 <thead>
                   <tr>
@@ -207,7 +176,7 @@
       </div>
       <!-- End Content -->
 
-      <?php require_once __DIR__ . '/components/footer.php'; ?>
+      <?php require_once('.'.PATHURL.'pages/components/footer.php'); ?>
     </main>
 
     <!-- Modal Create -->
@@ -274,120 +243,6 @@
     </div>
     <!-- End Modal Create -->
 
-    <script src="/assets/vendor/nouislider/js/nouislider.min.js"></script>
-
-    <!--   Core JS Files   -->
-    <script src="../../assets/js/core/popper.min.js"></script>
-    <script src="../../assets/js/core/bootstrap.min.js"></script>
-    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../../assets/js/plugins/chartjs.min.js"></script>
-    <script>
-      var ctx1 = document.getElementById("chart-line").getContext("2d");
-
-      var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
-
-      gradientStroke1.addColorStop(1, "rgba(94, 114, 228, 0.2)");
-      gradientStroke1.addColorStop(0.2, "rgba(94, 114, 228, 0.0)");
-      gradientStroke1.addColorStop(0, "rgba(94, 114, 228, 0)");
-      new Chart(ctx1, {
-        type: "line",
-        data: {
-          labels: [
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ],
-          datasets: [
-            {
-              label: "Mobile apps",
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 0,
-              borderColor: "#5e72e4",
-              backgroundColor: gradientStroke1,
-              borderWidth: 3,
-              fill: true,
-              data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-              maxBarThickness: 6,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-          interaction: {
-            intersect: false,
-            mode: "index",
-          },
-          scales: {
-            y: {
-              grid: {
-                drawBorder: false,
-                display: true,
-                drawOnChartArea: true,
-                drawTicks: false,
-                borderDash: [5, 5],
-              },
-              ticks: {
-                display: true,
-                padding: 10,
-                color: "#fbfbfb",
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: "normal",
-                  lineHeight: 2,
-                },
-              },
-            },
-            x: {
-              grid: {
-                drawBorder: false,
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false,
-                borderDash: [5, 5],
-              },
-              ticks: {
-                display: true,
-                color: "#ccc",
-                padding: 20,
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: "normal",
-                  lineHeight: 2,
-                },
-              },
-            },
-          },
-        },
-      });
-    </script>
-    <script>
-      var win = navigator.platform.indexOf("Win") > -1;
-      if (win && document.querySelector("#sidenav-scrollbar")) {
-        var options = {
-          damping: "0.5",
-        };
-        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
-      }
-    </script>
-    <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+    <?php require_once('.'.PATHURL.'lib/include/footer_scripts-pages.php'); ?>
   </body>
 </html>
