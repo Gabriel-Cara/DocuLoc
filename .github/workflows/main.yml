@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - master
+      - lab
 name: 🚀 Implementar sistema no push
 jobs:
   web-deploy:
