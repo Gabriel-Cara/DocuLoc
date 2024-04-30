@@ -26,7 +26,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <?php if($name_page == 'Casos'){ echo 'active'; } ?>" href="<?=PATHURL;?>casos.php">
+                <a class="nav-link <?php if($name_page == 'Casos'){ echo 'active'; } ?>" href="<?=PATHURL;?>cases.php">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ph ph-folder-open text-warning text-lg opacity-10"></i>
                     </div>
@@ -35,7 +35,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <?php if($name_page == 'Funcionarios'){ echo 'active'; } ?>" href="<?=PATHURL;?>funcionarios.php">
+                <a class="nav-link <?php if($name_page == 'Funcionarios'){ echo 'active'; } ?>" href="<?=PATHURL;?>employees.php">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ph ph-users-three text-info text-lg opacity-10"></i>
                     </div>
