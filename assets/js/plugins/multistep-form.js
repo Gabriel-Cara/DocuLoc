@@ -10,8 +10,6 @@ const DOMstrings = {
   stepNextBtnClass: 'js-btn-next'
 }
 
-console.log(DOMstrings.stepFormPanels);
-
 const removeClasses = (elemSet,className)=>{
   elemSet.forEach(elem=>{
       elem.classList.remove(className);
@@ -66,7 +64,8 @@ const setActivePanel = activePanelNum=>{
 
 const formHeight = activePanel=>{
   const activePanelHeight = activePanel.offsetHeight;
-  DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
+  // DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
+  DOMstrings.stepsForm.style.height = `auto`;
 }
 
 const setFormHeight = ()=>{

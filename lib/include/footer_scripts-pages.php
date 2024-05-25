@@ -9,7 +9,7 @@
 <script src=".<?=PATHURL;?>assets/js/customized/crop-image.js"></script>
 
 <!-- Script dos gráficos -->
-<script>
+<!-- <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
@@ -91,11 +91,12 @@
         },
     },
     });
-</script>
+</script> -->
 <!-- Fim script dos gráficos -->
 
 <script>
-    if (win && document.querySelector('#sidenav-scrollbar')) {
+    // if (win && document.querySelector('#sidenav-scrollbar')) {
+    if (document.querySelector('#sidenav-scrollbar')) {
     var options = {
         damping: '0.5'
     }

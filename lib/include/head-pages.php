@@ -20,6 +20,7 @@
     <!-- CSS Files -->
     <link id="pagestyle" href=".<?=PATHURL;?>assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css"/>
+    <link href=".<?=PATHURL;?>pages/components/cases/multistep-form/style.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
