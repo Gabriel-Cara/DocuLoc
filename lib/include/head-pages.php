@@ -18,7 +18,8 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href=".<?=PATHURL;?>assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href=".<?=PATHURL;?>assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+    <link href=".<?=PATHURL;?>pages/components/cases/multistep-form/style.css" rel="stylesheet" />
+    <link id="pagestyle" href=".<?=PATHURL;?>assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />    
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
