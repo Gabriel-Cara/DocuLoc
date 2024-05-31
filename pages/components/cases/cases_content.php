@@ -148,9 +148,13 @@
                                 </td>
         
                                 <td class="d-flex px-2 py-2 gap-3 justify-content-center">
-                                    <a class="btn btn-dark my-2" data-bs-toggle="modal" data-bs-target="#deleteModal<?=$case['id'];?>">
+                                    <a class="btn btn-dark my-2" data-bs-toggle="modal" data-bs-target="#downloadModal<?=$case['id'];?>">
                                         <i class="ph-bold ph-cloud-arrow-down" style="font-size: 18px;"></i>
                                     </a>
+        
+                                    <!-- <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                        <i class="ph-bold ph-file-arrow-up" style="font-size: 18px;"></i>
+                                    </a> -->
         
                                     <!-- <a class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#editModal">
                                         <i class="ph ph-pencil" style="font-size: 18px;"></i>
