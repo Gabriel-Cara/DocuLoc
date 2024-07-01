@@ -246,32 +246,6 @@
             <div class="multisteps-form__content mt-2">
                 <!-- First Row -->
                 <div class="row">
-                    <h6 class="text-start">Dados dos envolvidos</h6>
-                    <div class="d-flex flex-wrap gap-4">
-                        <div class="form-group text-start col-5">
-                            <label for="nome_locador">Nome do locador</label>
-                            <input class="form-control" type="text" name="locador" id="nome_locador" placeholder="Digite o nome completo" />
-                        </div>
-                    
-                        <div class="form-group text-start col-5">
-                            <label for="cpf_locador">CPF do locador</label>
-                            <input class="form-control mask_cpf" type="text" name="cpf_locador" id="cpf_locador" placeholder="Digite apenas números" />
-                        </div>
-                    
-                        <div class="form-group text-start col-5">
-                            <label for="nome_locatario">Nome do locatário</label>
-                            <input class="form-control" type="text" name="locatario" id="nome_locatario" placeholder="Digite o nome completo" />
-                        </div>
-                    
-                        <div class="form-group text-start col-5">
-                            <label for="cpf_locatario">CPF do locatário</label>
-                            <input class="form-control mask_cpf" type="text" name="cpf_locatario" id="cpf_locatario" placeholder="Digite apenas números" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Second Row -->
-                <div class="row">
                     <h6 class="text-start">Tipo de correção</h6>
                     <div class="d-flex gap-4">
                         <div class="form-check">
@@ -286,7 +260,7 @@
                     </div>
                 </div>
 
-                <!-- Third Row -->
+                <!-- Second Row -->
                 <div class="row">
                     <div class="form-group col-12 col-sm-6 text-start">
                         <label for="quem_iptu">Quem paga IPTU?</label>
