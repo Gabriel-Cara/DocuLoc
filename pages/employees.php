@@ -9,6 +9,13 @@
   if ($_REQUEST['sair'] == 1) {
     desconectar();
   }
+
+  // Get employees
+  $infos_actual_user = getUser($_COOKIE['token']);
+  if (!array_key_exists('code', $infos_actual_user)) {
+    echo '<pre>' . print_r($infos_actual_user, true) . '</pre>';
+    exit();
+  }
 ?>
   <?php require_once('.'.PATHURL.'lib/include/head-pages.php'); ?>
 
